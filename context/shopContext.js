@@ -43,7 +43,7 @@ class ShopProvider extends Component {
     ];
 
     const checkout = await client.checkout.addLineItems(
-      thisstate.checkout.id,
+      this.state.checkout.id,
       lineItemToAdd,
     );
 

@@ -22,9 +22,10 @@ class ShopProvider extends Component {
   }
 
   createCheckout = async () => {
-    const checkout = await client.checkout.create();
-    localStorage.setItem('checkout_id', checkout.id);
-    this.setState({ checkout: checkout });
+           
+        const checkout = await client.checkout.create();
+        localStorage.setItem('checkout_id', checkout.id);
+        this.setState({ checkout: checkout });
   };
 
   fetchCheckout = async (checkoutId) => {

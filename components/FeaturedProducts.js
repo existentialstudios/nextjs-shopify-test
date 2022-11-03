@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const FeaturedProducts = ({ products }) => {
   const { addItemToCheckOut, openCart } = useContext(ShopContext);
+  console.log(products);
   return (
     <div className="featured-produts">
       <h2>Featured Products</h2>
@@ -21,7 +22,7 @@ const FeaturedProducts = ({ products }) => {
                 />
                 <div className="title">{product.title}</div>
                 <div className="details">
-                  <div className="price">₦{product.variants[0].price}</div>
+                  <div className="price">${product.variants[0].price}</div>
                   <button
                     onClick={() => {
                       addItemToCheckOut(product.variants[0].id, 1);

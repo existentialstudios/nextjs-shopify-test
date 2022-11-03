@@ -49,6 +49,8 @@ const SingleProduct = ({ product }) => {
   );
 };
 
+
+
 export async function getStaticPaths() {
   let products = await client.product.fetchAll();
   products = JSON.parse(JSON.stringify(products));
@@ -67,3 +69,5 @@ export const getStaticProps = async ({ params }) => {
     },
   };
 };
+
+export default SingleProduct;
